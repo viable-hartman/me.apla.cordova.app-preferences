@@ -305,7 +305,8 @@
 {
 	__block CDVPluginResult* result;
 
-	if(&UIApplicationOpenSettingsURLString != nil) {
+	//if(&UIApplicationOpenSettingsURLString != nil) {
+	if(UIApplicationOpenSettingsURLString != nil) {
 
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 		result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
